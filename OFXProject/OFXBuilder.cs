@@ -12,8 +12,8 @@ namespace OFXProject
         
         internal StringBuilder OFXFileBuilder = new StringBuilder();
         internal static string OFXFilePath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\OFXFiles\TestOFX.ofx";
-        private string _fI = "AFCU";
-        private string _userID = "8745860";
+        private string _fI = "XXXX";
+        private string _userID = "XXXXXX";
          
         internal void WriteOFXFileHeader()
         {
