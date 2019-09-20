@@ -10,7 +10,7 @@ namespace OFXProject
     {
         public DateTime DatePosted { get; set; }
         public string TransactionType { get; set; }
-        public double TransactionAmount { get; set; }
+        public string TransactionAmount { get; set; }
         public string Description { get; set; }
         public string OriginalDescription { get; set; }
         public bool Pending { get; set; }

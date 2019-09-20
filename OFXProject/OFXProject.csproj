@@ -50,7 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="TransactionCSVParser.cs" />
+    <Compile Include="TransactionCSVReader.cs" />
     <Compile Include="TransactionFileMetadata.cs" />
+    <Compile Include="TransactionFileMetadataLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

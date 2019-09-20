@@ -27,12 +27,12 @@ namespace OFXProject
                     DatePosted = DateTime.Parse(data[0]),
                     Description = string.Copy(data[1]),
                     OriginalDescription = string.Copy(data[2]),
-                    TransactionAmount = double.Parse(data[3]),
+                    TransactionAmount = string.Copy(data[3]),
                     TransactionType = string.Copy(data[4])
 
                 };
 
-            return transactionquery.ToList();
+            return transactionquery;
         }
     }
 }
