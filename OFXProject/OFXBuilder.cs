@@ -40,6 +40,19 @@ namespace OFXProject
                     {
                         sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "<STMTTRN>");
                         sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<TRNTYPE>" + transaction.TransactionType.ToUpper());
+                        sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<DTPOSTED>" + transaction.DatePosted.ToString("yyyyMMddhhmmss"));
+                        if (transaction.TransactionType == "Debit")
+                        {
+                            sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<TRNAMT>" + "-" + transaction.TransactionAmount);
+                        }
+                        else
+                        {
+                            sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<TRNAMT>" + transaction.TransactionAmount);
+                        }
+                        sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<FITID>" + "0000000");
+                        sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<NAME>" + transaction.Description);
+                        sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "<MEMO>" + transaction.Description);
+
                         sw.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "</STMTTRN>");
                     }
                 }
